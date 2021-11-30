@@ -1,6 +1,6 @@
 # Yolov4-Deepsort-Two-Camera-Re-identification
 
-*This repo is based on https://github.com/theAIGuysCode/yolov4-deepsort. All credits goes to the author for setting up YOLOv4-Deepsort.*
+*This repository is based on https://github.com/theAIGuysCode/yolov4-deepsort. All credits goes to the author for setting up YOLOv4-Deepsort.*
 
 Object tracking implemented with YOLOv4, DeepSort, and TensorFlow. YOLOv4 is a state of the art algorithm that uses deep convolutional neural networks to perform object detections. We can take the output of YOLOv4 feed these object detections into Deep SORT (Simple Online and Realtime Tracking with a Deep Association Metric) in order to create a highly accurate object tracker.
 
@@ -67,7 +67,7 @@ python save_model.py --weights ./data/yolov4-tiny.weights --output ./checkpoints
 # Run yolov4-tiny object tracker
 python object_tracker.py --weights ./checkpoints/yolov4-tiny-416 --model yolov4 --video ./data/video/test.mp4 --output ./outputs/tiny.avi --tiny
 ```
-## Running the tracker and re-identification on two cameras
+## Running the Tracker and re-identification on two cameras
 The follinwg commands will allow you to run Yolov4 deepsort on two cameras. For example, video is the first input, video 1 is the second input. 0 and 1 for first and second webcams.
 ```
 # Run yolov4 deep sort object tracker on video
@@ -88,7 +88,7 @@ Example video showing the same object (planes) being identified:
 <p align="center"><img src="data/helpers/plane.gif"\></p>
 
 Example video showing the same object (trucks) being identified:
-<p align="center"><img src="data/helpers/truck.gif"\></p>
+<p align="center"><img src="data/helpers/bus.gif"\></p>
 
 ## Filter Classes that are Tracked by Object Tracker
 By default the code is setup to track all 80 or so classes from the coco dataset, which is what the pre-trained YOLOv4 model is trained on. However, you can easily adjust a few lines of code in order to track any 1 or combination of the 80 classes. It is super easy to filter only the ``person`` class or only the ``car`` class which are most common.
