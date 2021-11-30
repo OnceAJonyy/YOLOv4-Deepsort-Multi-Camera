@@ -1,14 +1,6 @@
-# yolov4-deepsort
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1zmeSTP3J5zu2d5fHgsQC06DyYEYJFXq1?usp=sharing)
+# Yolov4-deepsort-Two-Camera-Re-identification
 
 Object tracking implemented with YOLOv4, DeepSort, and TensorFlow. YOLOv4 is a state of the art algorithm that uses deep convolutional neural networks to perform object detections. We can take the output of YOLOv4 feed these object detections into Deep SORT (Simple Online and Realtime Tracking with a Deep Association Metric) in order to create a highly accurate object tracker.
-
-## Demo of Object Tracker on Persons
-<p align="center"><img src="data/helpers/demo.gif"\></p>
-
-## Demo of Object Tracker on Cars
-<p align="center"><img src="data/helpers/cars.gif"\></p>
 
 ## Getting Started
 To get started, install the proper dependencies either via Anaconda or Pip. I recommend Anaconda route for people using a GPU as it configures CUDA toolkit version for you.
@@ -70,6 +62,15 @@ python save_model.py --weights ./data/yolov4-tiny.weights --output ./checkpoints
 
 # Run yolov4-tiny object tracker
 python object_tracker.py --weights ./checkpoints/yolov4-tiny-416 --model yolov4 --video ./data/video/test.mp4 --output ./outputs/tiny.avi --tiny
+```
+## Running the tracker and re-identification on two cameras
+The follinwg commands will allow you to run Yolov4 deepsort on two cameras. For example, video is the first input, video 1 is the second input. 0 and 1 for first and second webcams.
+```
+# Run yolov4 deep sort object tracker on video
+python Two_camera.py --video ./data/video/test.mp4 --video1 ./data/video/test.mp4 --model yolov4
+
+# Run yolov4 deep sort object tracker on webcams
+python Two_camera.py --video 0 --video1 1 --model yolov4
 ```
 
 ## Resulting Video
