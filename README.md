@@ -67,10 +67,10 @@ python object_tracker.py --weights ./checkpoints/yolov4-tiny-416 --model yolov4 
 The follinwg commands will allow you to run Yolov4 deepsort on two cameras. For example, video is the first input, video 1 is the second input. 0 and 1 for first and second webcams.
 ```
 # Run yolov4 deep sort object tracker on video
-python Two_camera.py --video ./data/video/test.mp4 --video1 ./data/video/test.mp4 --model yolov4
+python two_camera.py --video ./data/video/test.mp4 --video1 ./data/video/test.mp4 --model yolov4
 
 # Run yolov4 deep sort object tracker on webcams
-python Two_camera.py --video 0 --video1 1 --model yolov4
+python two_camera.py --video 0 --video1 1 --model yolov4
 ```
 
 ## Resulting Video
