@@ -1,5 +1,7 @@
 # Yolov4-Deepsort-Two-Camera-Re-identification
 
+*This repo is based on https://github.com/theAIGuysCode/yolov4-deepsort. All credits goes to the author for setting up YOLOv4-Deepsort.*
+
 Object tracking implemented with YOLOv4, DeepSort, and TensorFlow. YOLOv4 is a state of the art algorithm that uses deep convolutional neural networks to perform object detections. We can take the output of YOLOv4 feed these object detections into Deep SORT (Simple Online and Realtime Tracking with a Deep Association Metric) in order to create a highly accurate object tracker.
 
 Re-identification is done by extracting the features of the tracked objects on both video inputs. Following that, the extracted features are subsequently correlated and displayed along with the tracked object ID. 
@@ -148,6 +150,7 @@ save_model.py:
 
 ### References  
 
-   Huge shoutout goes to hunglc007 and nwojke for creating the backbones of this repository:
+   Huge shoutout goes to AIGuysCode, hunglc007 and nwojke for creating the backbones of this repository:
   * [tensorflow-yolov4-tflite](https://github.com/hunglc007/tensorflow-yolov4-tflite)
   * [Deep SORT Repository](https://github.com/nwojke/deep_sort)
+  * [Base Repository](https://github.com/theAIGuysCode/yolov4-deepsort)
