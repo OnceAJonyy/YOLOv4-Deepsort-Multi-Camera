@@ -4,7 +4,7 @@
 
 Object tracking implemented with YOLOv4, DeepSort, and TensorFlow. YOLOv4 is a state of the art algorithm that uses deep convolutional neural networks to perform object detections. We can take the output of YOLOv4 feed these object detections into Deep SORT (Simple Online and Realtime Tracking with a Deep Association Metric) in order to create a highly accurate object tracker.
 
-Re-identification is done by extracting the features, which comes in the form of a [1x128] matrix, of the tracked objects on both video inputs. The feature matrix of tracked objects are extracted from each video inputs. Following that, the feature matrix from each video input are correlated and displayed alongside with each tracked object bounding box.
+Re-identification is done by extracting the features, which comes in the form of a [1x128] matrix, of the tracked objects from both video inputs. The feature matrix of all tracked objects are extracted from each video inputs. Following that, the feature matrix from each video input are correlated and displayed alongside with each tracked object bounding box.
 
 ## Getting Started
 To get started, install the proper dependencies either via Anaconda or Pip. I recommend Anaconda route for people using a GPU as it configures CUDA toolkit version for you.
