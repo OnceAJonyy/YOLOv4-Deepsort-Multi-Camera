@@ -2,6 +2,8 @@
 
 Object tracking implemented with YOLOv4, DeepSort, and TensorFlow. YOLOv4 is a state of the art algorithm that uses deep convolutional neural networks to perform object detections. We can take the output of YOLOv4 feed these object detections into Deep SORT (Simple Online and Realtime Tracking with a Deep Association Metric) in order to create a highly accurate object tracker.
 
+Re-identification is done by extracting the features of the tracked objects on both video inputs. Following that, the extracted features are subsequently correlated and displayed along with the tracked object ID. 
+
 ## Getting Started
 To get started, install the proper dependencies either via Anaconda or Pip. I recommend Anaconda route for people using a GPU as it configures CUDA toolkit version for you.
 
@@ -73,11 +75,15 @@ python two_camera.py --video ./data/video/test.mp4 --video1 ./data/video/test.mp
 python two_camera.py --video 0 --video1 1 --model yolov4
 ```
 
-## Resulting Video
+## Resulting Video for tracking
 As mentioned above, the resulting video will save to wherever you set the ``--output`` command line flag path to. I always set it to save to the 'outputs' folder. You can also change the type of video saved by adjusting the ``--output_format`` flag, by default it is set to AVI codec which is XVID.
 
 Example video showing tracking of all coco dataset classes:
 <p align="center"><img src="data/helpers/all_classes.gif"\></p>
+
+## Resulting Video for Re-identification between two cameras
+Example video showing the same object being identified:
+<p align="center"><img src="data/helpers/plane.gif"\></p>
 
 ## Filter Classes that are Tracked by Object Tracker
 By default the code is setup to track all 80 or so classes from the coco dataset, which is what the pre-trained YOLOv4 model is trained on. However, you can easily adjust a few lines of code in order to track any 1 or combination of the 80 classes. It is super easy to filter only the ``person`` class or only the ``car`` class which are most common.
