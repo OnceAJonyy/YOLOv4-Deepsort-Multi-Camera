@@ -82,8 +82,11 @@ Example video showing tracking of all coco dataset classes:
 <p align="center"><img src="data/helpers/all_classes.gif"\></p>
 
 ## Resulting Video for Re-identification between two cameras
-Example video showing the same object being identified:
+Example video showing the same object (planes) being identified:
 <p align="center"><img src="data/helpers/plane.gif"\></p>
+
+Example video showing the same object (trucks) being identified:
+<p align="center"><img src="data/helpers/truck.gif"\></p>
 
 ## Filter Classes that are Tracked by Object Tracker
 By default the code is setup to track all 80 or so classes from the coco dataset, which is what the pre-trained YOLOv4 model is trained on. However, you can easily adjust a few lines of code in order to track any 1 or combination of the 80 classes. It is super easy to filter only the ``person`` class or only the ``car`` class which are most common.
